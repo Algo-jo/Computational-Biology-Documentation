@@ -1,0 +1,24 @@
+Test Case — Session 2: DNA Composition Analysis
+
+Skenario
+Anda adalah bioinformatician di sebuah laboratorium forensik. Tim lapangan mengirimkan tiga fragmen DNA misterius yang ditemukan di TKP. Tugas Anda adalah menganalisis karakteristik fisikokimia ketiga fragmen tersebut untuk membantu identifikasi asal-usul sampel — apakah dari organisme berdarah panas (Tm tinggi, GC tinggi), organisme laut dalam (adaptasi termal ekstrem), atau kontaminasi artifisial (sekuens sintetis pendek).
+Fragment A : "GCGCGCGCGCGC"           # 12 bp
+Fragment B : "ATGATCGTAATCGGCATGCTA"  # 21 bp  
+Fragment C : "TTAATTAATTAA"           # 12 bp
+
+Tasks
+Task 1 — GC & AT Composition
+Hitung GC% dan AT% untuk ketiga fragmen menggunakan gc_fraction(). Tampilkan output dengan format rapi dan 2 desimal. Berikan juga interpretasi singkat di komentar kode: fragmen mana yang paling stabil secara termal berdasarkan komposisi saja, dan mengapa.
+
+Task 2 — Melting Temperature Komparatif
+Untuk ketiga fragmen, hitung Tm menggunakan ketiga metode (Wallace, GC Content, Nearest Neighbor). Susun hasilnya dalam output yang terstruktur seperti ini:
+=== Fragment A (12 bp) ===
+Wallace        : ___ °C
+GC Content     : ___ °C
+Nearest Neighbor: ___ °C
+
+Task 3 — Molecular Weight
+Hitung molecular weight ketiga fragmen sebagai DNA. Kemudian hitung juga Fragment B sebagai RNA dan tampilkan selisihnya. 
+
+Task 4 — Fungsi Reusable
+Bungkus semua analisis di atas ke dalam satu fungsi bernama analyze_dna(seq, label nama) yang menerima objek Seq dan nama label-nya, lalu mencetak semua hasil (GC%, AT%, melting temperature, dan Molecular Weight) dalam satu blok output yang rapi. Panggil fungsi tersebut untuk salah satu fragmen.
